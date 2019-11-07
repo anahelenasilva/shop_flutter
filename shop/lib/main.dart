@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/pages/login.page.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,24 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Home(),
-    );
-  }
-}
-
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Meu App"),
-      ),
-      body: Container(
-        color: Colors.blue,
-        child: Center(
-          child: Text("Hello World"),
-        ),
-      ),
+      home: LoginPage(),
     );
   }
 }
