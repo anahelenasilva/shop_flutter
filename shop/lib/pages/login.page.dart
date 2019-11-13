@@ -48,10 +48,26 @@ class LoginPage extends StatelessWidget {
                         ],
                       ),
                       TextFormField(
-                        autofocus: true,
+                        //autofocus: true,
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
                           labelText: "Email",
+                          labelStyle: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                          ),
+                        ),
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                      TextFormField(
+                        //autofocus: true,
+                        keyboardType: TextInputType.text,
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          labelText: "Password",
                           labelStyle: TextStyle(
                             color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
