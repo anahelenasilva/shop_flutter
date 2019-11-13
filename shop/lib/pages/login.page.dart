@@ -15,39 +15,56 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Container(
-              height: 450,
-              decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                new BoxShadow(
-                  color: Colors.black12,
-                  offset: new Offset(1, 2.0),
-                  blurRadius: 5,
-                  spreadRadius: 1,
-                ),
-              ]),
-              child: ListView(
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                height: 450,
+                decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                  new BoxShadow(
+                    color: Colors.black12,
+                    offset: new Offset(1, 2.0),
+                    blurRadius: 5,
+                    spreadRadius: 1,
+                  ),
+                ]),
+                child: Padding(
+                  padding: EdgeInsets.all(15),
+                  child: ListView(
                     children: <Widget>[
-                      Column(children: <Widget>[
-                        Text(
-                          "Welcome",
-                          style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.w500,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Column(children: <Widget>[
+                            Text(
+                              "Welcome",
+                              style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            Text("Sign in to continue"),
+                          ]),
+                          FlatButton(
+                            child: Text("Sign up"),
+                            onPressed: () {},
+                          )
+                        ],
+                      ),
+                      TextFormField(
+                        autofocus: true,
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: InputDecoration(
+                          labelText: "Email",
+                          labelStyle: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
                           ),
                         ),
-                        Text("Sign in to continue"),
-                      ]),
-                      FlatButton(
-                        child: Text("Sign up"),
-                        onPressed: () {},
-                      )
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
                     ],
-                  )
-                ],
-              ),
-            )
+                  ),
+                ))
           ],
         ),
       ),
