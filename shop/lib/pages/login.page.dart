@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/pages/signup.page.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -17,14 +18,17 @@ class LoginPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 height: 450,
-                decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                  new BoxShadow(
-                    color: Colors.black12,
-                    offset: new Offset(1, 2.0),
-                    blurRadius: 5,
-                    spreadRadius: 1,
-                  ),
-                ]),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    new BoxShadow(
+                      color: Colors.black12,
+                      offset: new Offset(1, 2.0),
+                      blurRadius: 5,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                ),
                 child: Padding(
                   padding: EdgeInsets.only(
                     left: 15,
@@ -48,7 +52,14 @@ class LoginPage extends StatelessWidget {
                           ]),
                           FlatButton(
                             child: Text("Sign up"),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SignupPage(),
+                                ),
+                              );
+                            },
                           )
                         ],
                       ),
