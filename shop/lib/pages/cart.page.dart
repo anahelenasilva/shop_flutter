@@ -9,7 +9,7 @@ class CartPage extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Container(
-              child: productList(),
+              child: productList(context),
             ),
           ),
           Container(
@@ -33,7 +33,7 @@ class CartPage extends StatelessWidget {
                         "\$ 420",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.blue,
+                          color: Theme.of(context).primaryColor,
                           fontSize: 20,
                         ),
                       ),
@@ -44,7 +44,7 @@ class CartPage extends StatelessWidget {
                   height: 50,
                   width: 150,
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.all(
                       Radius.circular(5),
                     ),
@@ -54,7 +54,7 @@ class CartPage extends StatelessWidget {
                     child: Text(
                       "CHECKOUT",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Theme.of(context).accentColor,
                       ),
                     ),
                     onPressed: () => {},
@@ -69,22 +69,22 @@ class CartPage extends StatelessWidget {
   }
 }
 
-Widget productList() {
+Widget productList(context) {
   return Container(
     child: ListView(
       scrollDirection: Axis.vertical,
       children: <Widget>[
-        productItem(),
-        productItem(),
-        productItem(),
-        productItem(),
-        productItem(),
+        productItem(context),
+        productItem(context),
+        productItem(context),
+        productItem(context),
+        productItem(context),
       ],
     ),
   );
 }
 
-Widget productItem() {
+Widget productItem(context) {
   return Container(
     height: 120,
     margin: EdgeInsets.all(5),
@@ -111,7 +111,7 @@ Widget productItem() {
               Text(
                 "200",
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
               SizedBox(
