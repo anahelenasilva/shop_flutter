@@ -37,11 +37,14 @@ class ProductItem extends StatelessWidget {
                 ),
               );
             },
-            child: Image.asset(
-              this.image,
-              width: 170,
-              height: 170,
-              fit: BoxFit.cover,
+            child: Hero(
+              tag: this.image,
+              child: Image.asset(
+                this.image,
+                width: 170,
+                height: 170,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           SizedBox(
