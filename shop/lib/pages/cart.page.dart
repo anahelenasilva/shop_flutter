@@ -30,7 +30,7 @@ class CartPage extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
-                        "420",
+                        "\$ 420",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.blue,
