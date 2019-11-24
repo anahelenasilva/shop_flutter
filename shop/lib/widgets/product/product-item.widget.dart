@@ -28,7 +28,12 @@ class ProductItem extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ProductPage(),
+                  builder: (context) => ProductPage(
+                    title: this.title,
+                    brand: this.brand,
+                    image: this.image,
+                    price: this.price,
+                  ),
                 ),
               );
             },
