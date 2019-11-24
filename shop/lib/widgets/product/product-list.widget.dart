@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:shop/widgets/product/product-item.widget.dart';
 
 class ProductList extends StatelessWidget {
+  final Axis scrollDirection;
+
+  ProductList({@required this.scrollDirection});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: ListView(
-        scrollDirection: Axis.horizontal,
+        scrollDirection: this.scrollDirection,
         children: <Widget>[
           ProductItem(
             title: "Nike Dry-Fit Long Sleeve",
